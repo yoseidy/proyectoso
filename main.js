@@ -10,7 +10,7 @@ var myCodeMirror = CodeMirror(document.getElementById('code'), {
 });
 
 let request = new XMLHttpRequest();
-request.open('GET', '/worker.js', true);
+request.open('GET', 'worker.js', true);
 
 request.send(null);
 request.onreadystatechange = function () {
