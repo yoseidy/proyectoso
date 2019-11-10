@@ -58,9 +58,9 @@ function watchFiles() {
     gulp.watch("./vendor/**/*.html", browserSyncReload);
     gulp.watch("./vendor/**/*.js", browserSyncReload);
     gulp.watch("./main.js", browserSyncReload);
-    gulp.watch("./peterson.js", browserSyncReload);
-    gulp.watch("./worker.js", browserSyncReload);
-    gulp.watch("./index.html", browserSyncReload);
+    gulp.watch("./*.html", browserSyncReload);
+    gulp.watch("./js/**/*.js", browserSyncReload);
+
 
 }
 
