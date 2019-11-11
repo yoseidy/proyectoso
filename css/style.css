@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #00DBDE;
+    background-image: linear-gradient(56deg, #00DBDE 0%, #FC00FF 100%);
+
+}
+.contenido{
+    background-color: #00DBDE;
+    background-image: linear-gradient(56deg, #00DBDE 0%, #FC00FF 100%);
+    min-height: 400px;
+    padding: 25px;
+    margin: 20px;
+}
+.baar{
+    padding: 70px;
+
+}
+.btn-primary{
+    background-color: #00DBDE;
+    background-image: linear-gradient(56deg, #00DBDE 0%, #FC00FF 100%);
+}
