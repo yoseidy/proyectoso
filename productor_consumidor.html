@@ -58,32 +58,29 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5">Algoritmo de Peterson</h1>
+            <h1 class="mt-5">Productor-Consumidor (con pase de mensajes)</h1>
         </div>
         <div class="col-lg-12">
-            <h1>Turno: <span class="text-danger" data-bind="text: turno() + 1"></span></h1>
-            <h1>Bandera 1: <span class="text-danger" data-bind="text: bandera()[0] === 1"></span></h1>
-            <h1>Bandera 2: <span class="text-danger" data-bind="text: bandera()[1]  === 1"></span></h1>
 
-            <h1 data-bind="visible: !finalizado()">En sección critica: <span class="text-success"
-                                                                             data-bind="text: enSeccionCritica()"></span>
-            </h1>
-            <h1 data-bind="visible: finalizado()">Ambos procesos salieron de su sección critica</h1>
-
-
-            <button data-bind="click: init,visible: finalizado" class="btn btn-primary">Reiniciar</button>
         </div>
 
         <div class="col-lg-12">
             <hr/>
             <h2>Código principal</h2>
-            <div class="col-lg-12" id="codePeterson">
+            <div class="col-lg-12" id="codeMain">
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <hr/>
+            <h2>Código productor</h2>
+            <div class="col-lg-12" id="codeProducer">
             </div>
         </div>
         <div class="col-lg-12">
             <hr/>
-            <h2>Código Procesos</h2>
-            <div class="col-lg-12" id="codeWorker"></div>
+            <h2>Código consumidor</h2>
+            <div class="col-lg-12" id="codeConsumer"></div>
         </div>
     </div>
 </div>

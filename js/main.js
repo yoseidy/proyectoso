@@ -39,3 +39,57 @@ function cargarCodigoPeterson() {
         }
     };
 }
+
+
+function cargarCodigoProductorConsumidor() {
+    let codeMain = CodeMirror(document.getElementById('codeMain'), {
+        value: "Cargando...",
+        mode: "javascript",
+        json: true,
+        readOnly: true
+    });
+
+    let codeProducer = CodeMirror(document.getElementById('codeProducer'), {
+        value: "Cargando...",
+        mode: "javascript",
+        json: true,
+        readOnly: true
+    });
+
+    let codeConsumer = CodeMirror(document.getElementById('codeConsumer'), {
+        value: "Cargando...",
+        mode: "javascript",
+        json: true,
+        readOnly: true
+    });
+
+    let requestMain = new XMLHttpRequest();
+    requestMain.open('GET', 'js/main.js', true);
+
+    requestMain.send(null);
+    requestMain.onreadystatechange = function () {
+        if (requestMain.readyState === 4 && requestMain.status === 200) {
+            codeMain.doc.setValue(requestMain.responseText);
+        }
+    };
+
+    let requestProducer = new XMLHttpRequest();
+    requestProducer.open('GET', 'js/productor.js', true);
+
+    requestProducer.send(null);
+    requestProducer.onreadystatechange = function () {
+        if (requestProducer.readyState === 4 && requestProducer.status === 200) {
+            codeProducer.doc.setValue(requestProducer.responseText);
+        }
+    };
+
+    let requestConsumer = new XMLHttpRequest();
+    requestConsumer.open('GET', 'js/consumidor.js', true);
+
+    requestConsumer.send(null);
+    requestConsumer.onreadystatechange = function () {
+        if (requestConsumer.readyState === 4 && requestConsumer.status === 200) {
+            codeConsumer.doc.setValue(requestConsumer.responseText);
+        }
+    };
+}

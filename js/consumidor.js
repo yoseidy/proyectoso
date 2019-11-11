@@ -1,4 +1,4 @@
-
+/*** Consumidor ***/
 onmessage = async (e) => {
 
 };
