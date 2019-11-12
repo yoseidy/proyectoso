@@ -6,9 +6,39 @@
 .contenido{
     background-color: #00DBDE;
     background-image: linear-gradient(56deg, #00DBDE 0%, #FC00FF 100%);
+    height: 422px;
+    padding: 22px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .contenido{
+        height: 99%;
+        font-size: 72%;
+        line-height: 12px;
+    }
+    .contenido1{
+        height: 99%;
+        font-size: 72%;
+        line-height: 12px;
+    }
+  }
+.ti{
+    font-size: 3vw;
+}
+.contenido1{
+    background-color: #00DBDE;
+    background-image: linear-gradient(56deg, #00DBDE 0%, #FC00FF 100%);
     min-height: 400px;
-    padding: 25px;
-    margin: 20px;
+    padding: 6px;
+    margin: 2px;
+    line-height: 15px;
+}
+.contenido2{
+    min-height: 90px;
+    padding: 7px;
+    margin: 7px;
 }
 .baar{
     padding: 70px;

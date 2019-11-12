@@ -15,6 +15,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="vendor/codemirror/codemirror.css" rel="stylesheet">
+    <link href="vendor/codemirror/theme/dracula.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
@@ -24,7 +25,7 @@
     <script src="vendor/codemirror/mode/javascript/javascript.js"></script>
 </head>
 
-<body class="text-center">
+<body >
 
 <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -53,24 +54,44 @@
     </nav>
 
 <!-- Page Content -->
-    <div class="container">
-        <h1 class="mt-5">Algoritmo de Peterson</h1>
+    <div class="container baar">
+        <h1 class="cover-heading  text-center">Algoritmo de Peterson</h1>
         <div class="row">
-            <div class="col-md-6 ">
+            <div class="col-md-6">
+                <div class="contenido2">
+                    <h1 class="lead">Turno: <span class="text-danger" data-bind="text: turno() + 1"></span></h1>
+                    <h1 class="lead">Bandera 1: <span class="text-danger" data-bind="text: bandera()[0] === 1"></span></h1>
+                    <h1 class="lead">Bandera 2: <span class="text-danger" data-bind="text: bandera()[1]  === 1"></span></h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contenido2">
+                    <h1 class="lead" data-bind="visible: !finalizado()">En sección critica:
+                        <span class="text-success" data-bind="text: enSeccionCritica()"></span>
+                    </h1>
+                    <h1 class="lead" data-bind="visible: finalizado()">Ambos procesos salieron de su sección critica</h1>
+                    <button data-bind="click: init,visible: finalizado" class="btn btn-primary btn-lg">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--div class="col-md-6 ">
                 <h1>Turno: <span class="text-danger" data-bind="text: turno() + 1"></span></h1>
                 <h1>Bandera 1: <span class="text-danger" data-bind="text: bandera()[0] === 1"></span></h1>
                 <h1>Bandera 2: <span class="text-danger" data-bind="text: bandera()[1]  === 1"></span></h1>
-            </div>
-            <div class="col-md-6">
+            </div-->
+            <!--div class="col-md-6">
                 <h1 data-bind="visible: !finalizado()">En sección critica:
                     <span class="text-success" data-bind="text: enSeccionCritica()"></span>
                 </h1>
                 <h1 data-bind="visible: finalizado()">Ambos procesos salieron de su sección critica</h1>
                 <button data-bind="click: init,visible: finalizado" class="btn btn-primary btn-lg">Reiniciar</button>
-            </div>
+            </div-->
             <!-- // carga consola con el codigo principal correspondiente a codeterson--> 
             <div class="col-lg-6">
-                <div class=" contenido">
+                <div class=" contenido1">
                     <h2>Código principal</h2>
                     <div class="col-lg-12" id="codePeterson">
                     </div>
@@ -79,7 +100,7 @@
             </div>
             <!-- // carga consola con el codigo de los procesos correspondiente a codeWorker--> 
             <div class="col-lg-6 ">
-                <div class=" contenido">
+                <div class=" contenido1">
                     <h2>Código Procesos</h2>
                     <div class="col-lg-12" id="codeWorker">
                     </div>

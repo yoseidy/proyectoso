@@ -1,4 +1,5 @@
-// This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
+// This is a simple *viewmodel* 
+//- JavaScript that defines the data and behavior of your UI
 function AppViewModel() {
     self = this;
 
@@ -6,13 +7,14 @@ function AppViewModel() {
     this.bandera = ko.observableArray([0, 0]);
     this.turno = ko.observable(-1);
     this.finalizado = ko.computed(function () {
-        return this.bandera()[0] === 0 && this.bandera()[1] === 0 && this.turno() >= 0;
+        return this.bandera()[0] === 0 
+        && this.bandera()[1] === 0 && this.turno() >= 0;
     }, this);
 
     this.enSeccionCritica = ko.computed(function () {
         if (this.bandera()[0] === 1 && this.turno() === 0) {
             return 'Proceso 1';
-        } else if (this.bandera()[1] === 1 && this.turno() === 1) {
+        } else if (this.bandera()[1] === 1 && this.turno() === 1){
             return 'Proceso 2';
         } else if (this.bandera()[0] === 1) {
             return 'Proceso 1';
@@ -41,7 +43,8 @@ function AppViewModel() {
                 self.bandera(Array.from(arrBandera));
                 self.turno(arrTurno[0]);
             };
-            worker.postMessage({buffBandera: buffBandera, i: i, buffTurno: buffTurno});
+            worker.postMessage({buffBandera: 
+                buffBandera, i: i, buffTurno: buffTurno});
         }
 
     };

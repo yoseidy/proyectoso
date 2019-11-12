@@ -7,14 +7,19 @@ function cargarCodigoPeterson() {
         value: "Cargando...",
         mode: "javascript",
         json: true,
-        readOnly: true
+        readOnly: true,
+        theme: "dracula",
+        lineNumbers: true
     });
 
     let codePeterson = CodeMirror(document.getElementById('codePeterson'), {
         value: "Cargando...",
         mode: "javascript",
         json: true,
-        readOnly: true
+        readOnly: true,
+        theme: "dracula",
+        lineNumbers: true
+       
     });
 
 

@@ -40,6 +40,9 @@ function modules() {
 
     let codemirrorModes = gulp.src('./node_modules/codemirror/mode/**/*')
         .pipe(gulp.dest('./vendor/codemirror/mode/'));
+
+    let codemirrorTheme = gulp.src('./node_modules/codemirror/theme/*')
+        .pipe(gulp.dest('./vendor/codemirror/theme/'));
     // Bootstrap
     let bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
         .pipe(gulp.dest('./vendor/bootstrap'));
@@ -49,7 +52,7 @@ function modules() {
         '!./node_modules/jquery/dist/core.js'
     ])
         .pipe(gulp.dest('./vendor/jquery'));
-    return merge(bootstrap, jquery, knockout, codemirror, codemirrorModes);
+    return merge(bootstrap, jquery, knockout, codemirror, codemirrorModes, codemirrorTheme);
 }
 
 // Watch files
@@ -60,6 +63,7 @@ function watchFiles() {
     gulp.watch("./main.js", browserSyncReload);
     gulp.watch("./*.html", browserSyncReload);
     gulp.watch("./js/**/*.js", browserSyncReload);
+    gulp.watch("./css/*.css", browserSyncReload);
 
 
 }
