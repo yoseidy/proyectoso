@@ -51,21 +51,27 @@ function cargarCodigoProductorConsumidor() {
         value: "Cargando...",
         mode: "javascript",
         json: true,
-        readOnly: true
+        readOnly: true,
+        theme: "dracula",
+        lineNumbers: true
     });
 
     let codeProducer = CodeMirror(document.getElementById('codeProducer'), {
         value: "Cargando...",
         mode: "javascript",
         json: true,
-        readOnly: true
+        readOnly: true,
+        theme: "dracula",
+        lineNumbers: true
     });
 
     let codeConsumer = CodeMirror(document.getElementById('codeConsumer'), {
         value: "Cargando...",
         mode: "javascript",
         json: true,
-        readOnly: true
+        readOnly: true,
+        theme: "dracula",
+        lineNumbers: true
     });
 
     let requestMain = new XMLHttpRequest();
