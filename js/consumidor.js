@@ -15,6 +15,10 @@ function consumir_elemento(elemento) {
     console.log("[Consumidor] Elemento procesado (invertido): " + elemento.split("").reverse().join(""));
 }
 
+function send(mensaje) {
+    postMessage(mensaje);
+}
+
 onmessage = async (e) => {
     if (e.data === null) {
         postMessage(null);
@@ -25,8 +29,8 @@ onmessage = async (e) => {
         // Evitar consumo excesivo de mensajes (RAM/CPU)
         await sleep(1000);
 
-        // Pedir otro
-        postMessage(null);
+        // Enviar mensaje nulo al productor
+        send(null);
 
         consumir_elemento(elemento);
     }

@@ -10,6 +10,7 @@ function Mensaje(elemento) {
 
 const N = 100; // numero de mensajes que soporta el buffer
 
+
 function AppViewModel() {
     self = this;
 
