@@ -10,13 +10,15 @@
     padding: 22px;
     margin-bottom: 5px;
     margin-top: 5px;
+    line-height: 12px;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .contenido{
         height: 99%;
-        font-size: 72%;
-        line-height: 12px;
+        font-size: 65%;
+        line-height: 8px;
+        //font-size: 8px;
     }
     .contenido1{
         height: 99%;

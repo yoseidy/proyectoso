@@ -1,3 +1,9 @@
+/* worker es un script que se ejecuta en segundo plano, sin
+ * afectar o bloquear el desempeño de la pagina web
+ * Gracias a la API de HTML de web Worker podemos crear de una
+ * forma muy simple uno o varios subprocesos en nuestro hilo de ejecucion
+ */
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
